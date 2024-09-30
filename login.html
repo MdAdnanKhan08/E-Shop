@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign-Up | E-shop</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Corrected JS file reference -->
+    <script type="module" src="login.js" defer></script>
+    <!-- <script type="module"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="auth-container">
+        <!-- Login Panel -->
+        <div class="login-panel active" id="login-panel">
+            <h2>Login to E-shop</h2>
+            <form class="login-form" id="login-form">
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn-login">Login</button>
+                <p class="auth-switch-text">Don't have an account? <span class="switch-to-signup">Sign Up</span></p>
+            </form>
+        </div>
+
+        <!-- Sign-Up Panel -->
+        <div class="signup-panel" id="signup-panel">
+            <h2>Create an Account</h2>
+            <form class="signup-form" id="signup-form">
+                <div class="input-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter a password" required>
+                </div>
+                <button type="submit" class="btn-signup">Sign Up</button>
+                <p class="auth-switch-text">Already have an account? <span class="switch-to-login">Login</span></p>
+            </form>
+        </div>
+
+        <!-- Success Message Panel -->
+        <div class="success-panel" id="success-panel" style="display: none;">
+            <h2>Account Created Successfully!</h2>
+            <p>Your account has been created. You can now login to your account.</p>
+            <button id="go-to-login">Go to Login</button>
+        </div>
+    </div>
+
+</body>
+</html>

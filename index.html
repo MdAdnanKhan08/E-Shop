@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E - Shop</title>
+    <!-- Link to FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="nav-logo">
+                <a href="#" class="logo">E-Shop</a>
+            </div>
+
+            <div class="nav-search">
+                <input type="text" id="search-input" placeholder="Search for Product and More">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-cart" id="nav-cart-id">
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+            </div>
+
+            <div class="nav-login" id="nav-login-id">
+                <a href="login.html"><i class="fa-regular fa-user"></i>Login</a>
+            </div>
+        </div>
+
+        <!-- -----------------panel------------ ---------------------->
+        <div class="panel">
+            <div class="panel-all" id="panel-all-id">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </div>
+            <div class="panel-options">
+                <p><a href="#">Grocery</a></p>
+                <p><a href="#beauty">Beauty</a></p>
+                <p><a href="#fashion">Fashion</a></p>
+                <p><a href="#toys">Toys</a></p>
+                <p><a href="#electronics">Electronics</a></p>
+                <p><a href="#home&kitchen">Home & Kitchen</a></p>
+                <p><a href="#books">Books</a></p>
+                <p><a href="#sports">Sports</a></p>          
+            </div>
+        </div>
+    </header>
+
+    <!-- ----------------------sidebar navigation------------------------ -->
+    <div class="sidebar-container-nav" id="sidebar-container-nav-id">
+        <div class="sidebar-left">
+            <div class="sidebar-menu" id="sidebar-cross-btn">
+                <h2>Menu</h2>
+                
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="menu">
+                <p><a href="#">Grocery</a></p>
+                <p><a href="#">Beauty</a></p>
+                <p><a href="#">Fashion</a></p>
+                <p><a href="#">Toys</a></p>
+                <p><a href="#">Electronics</a></p>
+                <p><a href="#">Home & Kitchen</a></p>
+                <!-- <p><a href="#">Books</a></p>
+                <p><a href="#">Sports</a></p>  -->
+                <p><a href="cart.html">Cart</a></p> 
+                <p><a href="login.html">Login</a></p> 
+                <p><a href="#">Settings</a></p> 
+            </div>
+            <div class="social-media">
+                <p><a href="#" style="color: blue;"><i class="fa-brands fa-facebook"></i></a></p>
+                <p><a href="#" style="color: rgb(0, 0, 255);"><i class="fa-brands fa-twitter"></i></a></p>
+                <p><a href="#" style="color: rgb(255, 0, 0);"><i class="fa-brands fa-instagram"></i></a></p>
+                <p><a href="#" style="color: red;"><i class="fa-brands fa-youtube"></i></a></p>
+              </div>
+            
+        </div>
+    </div>
+
+
+
+
+    <!-- -------------------Hero Section----------------------- -->
+    <div class="hero-section">
+        <div class="img-list">
+            <div class="img-item">
+                <img src="image/slide-image2.jpg">
+            </div>
+            <div class="img-item">
+                <img src="image/slide-image1.jpg">
+            </div>
+            <div class="img-item">
+                <img src="image/slide-image4.jpg">
+            </div>
+            <div class="img-item">
+                <img src="image/slide-image3.jpg">
+            </div>
+            <div class="img-item">
+                <img src="image/slide-image5.jpg">
+            </div>
+            <div class="img-item">
+                <img src="image/slide-image6.jpg">
+            </div>
+        </div>
+        <div class="img-btn-container">
+            <button class="slider-btn" id="slide-btn-left"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn" id="slide-btn-right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+<!-- -------------------------- Shop Section-------------------- -->
+
+      <!-- Shop Section - Top Deals -->
+    <section class="shop-section">
+        <h2>Top Deals</h2>
+        <div class="category-section">
+            <!-- Top Deals Category -->
+            <div class="category-container">
+                <!-- <h3>Electronics</h3> -->
+                <div class="products-scroll">
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box4_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Mobile Phone</h4>
+                        <p class="price">₹15,000 <span class="original-price">₹18,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <!-- Add more product-boxes here -->
+                    <div class="product-box">
+                        <div class="offer-tag">29% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box6_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Pet care</h4>
+                        <p class="price">₹1,999 <span class="original-price">₹8,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-instrunment.webp" alt="Product 1" class="product-image">
+                        <h4>Music & Instrument</h4>
+                        <p class="price">₹4,999 <span class="original-price">₹8,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">80% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-men-lower.webp" alt="Product 1" class="product-image">
+                        <h4>Men Fashion</h4>
+                        <p class="price">₹299 <span class="original-price">₹1,100</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">65% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box3_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Room Decoration</h4>
+                        <p class="price">₹9,999 <span class="original-price">₹18,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box1_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Fashion</h4>
+                        <p class="price">₹7,199 <span class="original-price">₹13,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">37% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-pen.webp" alt="Product 1" class="product-image">
+                        <h4>Stationary</h4>
+                        <p class="price">₹229 <span class="original-price">₹500</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        
+
+            <!-- -------------------------Beauty section------------------- -->
+            <div class="category-container" id="beauty">
+                <h3>Beauty</h3>
+                <div class="products-scroll">
+                    <div class="product-box">
+                        <div class="offer-tag">70% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box2_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Body Care</h4>
+                        <p class="price">₹1,999 <span class="original-price">₹8,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <!-- Add more product-boxes here -->
+                    <div class="product-box">
+                        <div class="offer-tag">80% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box8_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Dress</h4>
+                        <p class="price">₹4,999 <span class="original-price">₹9,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box5_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Beauty Care</h4>
+                        <p class="price">₹6,599 <span class="original-price">₹10,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">70% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box2_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Body Care</h4>
+                        <p class="price">₹1,999 <span class="original-price">₹8,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">80% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box8_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Dress</h4>
+                        <p class="price">₹4,999 <span class="original-price">₹9,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box5_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Beauty Care</h4>
+                        <p class="price">₹6,599 <span class="original-price">₹10,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">70% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box2_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Body Care</h4>
+                        <p class="price">₹1,999 <span class="original-price">₹8,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------------------Toys section------------------- -->
+            <div class="category-container" id="toys">
+                <h3>Toys</h3>
+                <div class="products-scroll">
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-puzzle-cube.webp" alt="Product 1" class="product-image">
+                        <h4>Puzzle</h4>
+                        <p class="price">₹499 <span class="original-price">₹1,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <!-- Add more product-boxes here -->
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-soft-toy.webp" alt="Product 1" class="product-image">
+                        <h4>Soft Teddy</h4>
+                        <p class="price">₹599 <span class="original-price">₹1,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-learning-toy.webp" alt="Product 1" class="product-image">
+                        <h4>Learning Toy</h4>
+                        <p class="price">₹499 <span class="original-price">₹1,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box7_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Pencil Colour</h4>
+                        <p class="price">₹299 <span class="original-price">₹8,00</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-puzzle-cube.webp" alt="Product 1" class="product-image">
+                        <h4>Puzzle</h4>
+                        <p class="price">₹499 <span class="original-price">₹1,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-learning-toy.webp" alt="Product 1" class="product-image">
+                        <h4>Learning Toy</h4>
+                        <p class="price">₹499 <span class="original-price">₹1,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box7_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Pencil Colour</h4>
+                        <p class="price">₹299 <span class="original-price">₹8,00</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------------------Home & kitchen section------------------- -->
+            <div class="category-container" id="home&kitchen">
+                <h3>Home & Kitchen</h3>
+                <div class="products-scroll">
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-dryfruit.webp" alt="Product 1" class="product-image">
+                        <h4>Almonds</h4>
+                        <p class="price">₹399 <span class="original-price">₹899</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <!-- Add more product-boxes here -->
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-food-spread.webp" alt="Product 1" class="product-image">
+                        <h4>Peanut Butter</h4>
+                        <p class="price">₹299 <span class="original-price">₹799</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-oats.webp" alt="Product 1" class="product-image">
+                        <h4>Oats</h4>
+                        <p class="price">₹199 <span class="original-price">₹699</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-coffee-powder.webp" alt="Product 1" class="product-image">
+                        <h4>Coffee Powder</h4>
+                        <p class="price">₹399 <span class="original-price">₹999</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-couch.webp" alt="Product 1" class="product-image">
+                        <h4>Sofa</h4>
+                        <p class="price">₹13,999 <span class="original-price">₹22,699</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-oats.webp" alt="Product 1" class="product-image">
+                        <h4>Oats</h4>
+                        <p class="price">₹199 <span class="original-price">₹699</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/shop-food-spread.webp" alt="Product 1" class="product-image">
+                        <h4>Peanut Butter</h4>
+                        <p class="price">₹299 <span class="original-price">₹799</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------------------Electronics------------------- -->
+            <div class="category-container" id="electronics">
+                <h3>Electronics</h3>
+                <div class="products-scroll">
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box4_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Mobile Phone</h4>
+                        <p class="price">₹15,000 <span class="original-price">₹18,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <!-- Add more product-boxes here -->
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/electronics1.webp" alt="Product 1" class="product-image">
+                        <h4>Mobile Phone</h4>
+                        <p class="price">₹15,000 <span class="original-price">₹18,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/electronics2.webp" alt="Product 1" class="product-image">
+                        <h4>HP Laptop</h4>
+                        <p class="price">₹55,000 <span class="original-price">₹68,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/electronics3.webp" alt="Product 1" class="product-image">
+                        <h4>Dell Laptop</h4>
+                        <p class="price">₹45,000 <span class="original-price">₹58,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box4_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Mobile Phone</h4>
+                        <p class="price">₹15,000 <span class="original-price">₹18,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/electronics2.webp" alt="Product 1" class="product-image">
+                        <h4>HP Laptop</h4>
+                        <p class="price">₹55,000 <span class="original-price">₹68,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box4_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Mobile Phone</h4>
+                        <p class="price">₹15,000 <span class="original-price">₹18,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------------------Fashion------------------- -->
+            <div class="category-container" id="fashion">
+                <h3>Fashion</h3>
+                <div class="products-scroll">
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/fashion1.webp" alt="Product 1" class="product-image">
+                        <h4>T-Shirt</h4>
+                        <p class="price">₹400 <span class="original-price">₹1000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <!-- Add more product-boxes here -->
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/fashion2.webp" alt="Product 1" class="product-image">
+                        <h4>Hoodie</h4>
+                        <p class="price">₹500 <span class="original-price">₹800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/fashion3.webp" alt="Product 1" class="product-image">
+                        <h4>Sneakers</h4>
+                        <p class="price">₹500 <span class="original-price">₹800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/fashion5.webp" alt="Product 1" class="product-image">
+                        <h4>Lower</h4>
+                        <p class="price">₹300 <span class="original-price">₹800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
+                        <img src="/image/fashion6.webp" alt="Product 1" class="product-image">
+                        <h4>Paint</h4>
+                        <p class="price">₹700 <span class="original-price">₹1800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/fashion4.webp" alt="Product 1" class="product-image">
+                        <h4>Sneakers</h4>
+                        <p class="price">₹500 <span class="original-price">₹800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 800)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/fashion7.webp" alt="Product 1" class="product-image">
+                        <h4>Shirt</h4>
+                        <p class="price">₹600 <span class="original-price">₹1800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 600)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------------------Books------------------- -->
+            <div class="category-container" id="books">
+                <h3>Books</h3>
+                <div class="products-scroll">
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/book1.webp" alt="Product 1" class="product-image">
+                        <h4>Magic Books</h4>
+                        <p class="price">₹1500 <span class="original-price">₹2800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1500)">Add to Cart</button>
+                    </div>
+                    <!-- Add more product-boxes here -->
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/book2.webp" alt="Product 1" class="product-image">
+                        <h4>Influence People</h4>
+                        <p class="price">₹1200 <span class="original-price">₹1800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1200)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/book1.webp" alt="Product 1" class="product-image">
+                        <h4>Magic Books</h4>
+                        <p class="price">₹1500 <span class="original-price">₹2800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1500)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/book2.webp" alt="Product 1" class="product-image">
+                        <h4>Influence People</h4>
+                        <p class="price">₹1200 <span class="original-price">₹1800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1200)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/book1.webp" alt="Product 1" class="product-image">
+                        <h4>Magic Books</h4>
+                        <p class="price">₹1500 <span class="original-price">₹2800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1500)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/book2.webp" alt="Product 1" class="product-image">
+                        <h4>Influence People</h4>
+                        <p class="price">₹1200 <span class="original-price">₹1800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1200)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/book1.webp" alt="Product 1" class="product-image">
+                        <h4>Magic Books</h4>
+                        <p class="price">₹1500 <span class="original-price">₹2800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1500)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -------------------------Sports------------------- -->
+            <div class="category-container" id="sports">
+                <h3>Sports</h3>
+                <div class="products-scroll">
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/sports1.webp" alt="Product 1" class="product-image">
+                        <h4>Badminton Bag</h4>
+                        <p class="price">₹2500 <span class="original-price">₹3800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 2500)">Add to Cart</button>
+                    </div>
+                    <!-- Add more product-boxes here -->
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/sports2.webp" alt="Product 1" class="product-image">
+                        <h4>Swimming Goggles</h4>
+                        <p class="price">₹1500 <span class="original-price">₹1800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1500)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/sports3.webp" alt="Product 1" class="product-image">
+                        <h4>Cricket Bat</h4>
+                        <p class="price">₹3500 <span class="original-price">₹4800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 3500)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/sports1.webp" alt="Product 1" class="product-image">
+                        <h4>Badminton Bag</h4>
+                        <p class="price">₹2500 <span class="original-price">₹3800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 2500)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/sports2.webp" alt="Product 1" class="product-image">
+                        <h4>Swimming Goggles</h4>
+                        <p class="price">₹1500 <span class="original-price">₹1800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 1500)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">60% OFF</div> <!-- Offer Section -->
+                        <img src="/image/sports3.webp" alt="Product 1" class="product-image">
+                        <h4>Cricket Bat</h4>
+                        <p class="price">₹3500 <span class="original-price">₹4800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 3500)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">20% OFF</div> <!-- Offer Section -->
+                        <img src="/image/sports1.webp" alt="Product 1" class="product-image">
+                        <h4>Badminton Bag</h4>
+                        <p class="price">₹2500 <span class="original-price">₹3800</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 2500)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <div class="offer-section">
+        <p>Special Offer: Get up to 50% off on select items!</p>
+    </div>
+  
+  <!------------------------ Shop Section 2 ---------------------------->
+  <div class="shop-section2">
+    <!-- Quard Box 1: Beauty -->
+    <div class="quard-box">
+        <h2 class="quard-title">Beauty</h2>
+        <div class="boxes">
+            <div class="box-contain2">
+                <div class="box-img2">
+                    <img src="/image/box5_image.jpg" alt="Product Image">
+                </div>
+                <h3 class="product-name">Face Cream</h3>
+                <p class="offer-details">Upto 30% Off</p>
+            </div>
+        </div>
+  
+        <div class="boxes">
+            <div class="box-contain2">
+                <div class="box-img2">
+                    <img src="/image/box8_image.jpg" alt="Product Image">
+                </div>
+                <h3 class="product-name">Lipstick Set</h3>
+                <p class="offer-details">Upto 25% Off</p>
+            </div>
+        </div>
+  
+        <div class="boxes">
+            <div class="box-contain2">
+                <div class="box-img2">
+                    <img src="/image/box2_image.jpg" alt="Product Image">
+                </div>
+                <h3 class="product-name">Moisturizer</h3>
+                <p class="offer-details">Upto 35% Off</p>
+            </div>
+        </div>
+  
+        <div class="boxes">
+            <div class="box-contain2">
+                <div class="box-img2">
+                    <img src="/image/box1_image.jpg" alt="Product Image">
+                </div>
+                <h3 class="product-name">Dress</h3>
+                <p class="offer-details">Upto 40% Off</p>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Quard Box 2: Toy -->
+    <div class="quard-box">
+        <h2 class="quard-title">Toy</h2>
+        <div class="boxes">
+            <div class="box-contain2">
+                <div class="box-img2">
+                    <img src="/image/shop-learning-toy.webp" alt="Product Image">
+                </div>
+                <h3 class="product-name">Learning Toy</h3>
+                <p class="offer-details">Upto 40% Off</p>
+            </div>
+        </div>
+  
+        <div class="boxes">
+            <div class="box-contain2">
+                <div class="box-img2">
+                    <img src="/image/shop-puzzle-cube.webp" alt="Product Image">
+                </div>
+                <h3 class="product-name">Puzzle </h3>
+                <p class="offer-details">Upto 20% Off</p>
+            </div>
+        </div>
+  
+        <div class="boxes">
+            <div class="box-contain2">
+                <div class="box-img2">
+                    <img src="/image/shop-remote-control-toy.webp" alt="Product Image">
+                </div>
+                <h3 class="product-name">Remote Control Car</h3>
+                <p class="offer-details">Upto 30% Off</p>
+            </div>
+        </div>
+  
+        <div class="boxes">
+            <div class="box-contain2">
+                <div class="box-img2">
+                    <img src="/image/box7_image.jpg" alt="Product Image">
+                </div>
+                <h3 class="product-name">Pencil Colour</h3>
+                <p class="offer-details">Upto 50% Off</p>
+            </div>
+        </div>
+    </div>
+  </div>
+    
+    <!------------------------------- footer ------------------------------------->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Top Links Section -->
+        <!-- Middle Links Section -->
+        <div class="footer-middle">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Get to Know Us</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <a href="admin.html"><h3>Admin Section</h3></a>
+                    <ul>
+                        <li><a href="admin.html">Login</a></li>
+                        <li><a href="#">Create Shop Details</a></li>
+                        <li><a href="#">Manage Shop Details</a></li>
+                        <li><a href="#">Manage Offer details</a></li>
+                        <li><a href="#">Manage Category & Floor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>User Section</h3>
+                    <ul>
+                        <li><a href="#">List of shop Details</a></li>
+                        <li><a href="#">List offer Products</a></li>
+                        <li><a href="#">Shop Wise Offers</a></li>
+                        <li><a href="#">View Shop Details</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect with Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-center">
+                <h2>E-Shop</h2>
+                <p>Your One-Stop Shopping Destination</p>
+            </div>
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+            <p>&copy; 2024 Adnan Khan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBSWedNRnpsAWhhY3uXeuBt7mw-7QJ_EEM",
+          authDomain: "e-shop-512f1.firebaseapp.com",
+          projectId: "e-shop-512f1",
+          storageBucket: "e-shop-512f1.appspot.com",
+          messagingSenderId: "350982405481",
+          appId: "1:350982405481:web:71c4ef52edc8723e1611f8",
+          measurementId: "G-EG8G794ELB"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script> -->
+</body>
+</html>
