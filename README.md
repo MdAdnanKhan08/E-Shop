@@ -5,9 +5,10 @@
 ### User Section:
 - Browse products by categories and shops.
 - View product details and offers.
+- Compare product prices and features.
 - Responsive design for both desktop and mobile.
 
-### Admin Panel:
+### Admin Section:
 - Login functionality for admin.
 - Create and manage shop details.
 - Manage product and offer details.
