@@ -10,6 +10,15 @@
 </head>
 <body>
 
+    <!-- Header -->
+    <div class="header">
+        <div class="header-logo">E-Shop</div>
+        <div class="header-links">
+            <a href="index.html" class="header-link">Home</a>
+            <a href="index.html" class="header-link">Logout</a>
+        </div>
+    </div>
+
     <!-- Admin Section Container -->
     <div class="admin-container">
         <!-- Sidebar -->
@@ -25,22 +34,6 @@
 
         <!-- Main Content -->
         <div class="main-content">
-            <!-- Login Section -->
-            <div class="login-section active" id="login-section">
-                <h2>Admin Login</h2>
-                <form id="admin-login-form">
-                    <div class="input-group">
-                        <label for="admin-email">Email</label>
-                        <input type="email" id="admin-email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="admin-password">Password</label>
-                        <input type="password" id="admin-password" placeholder="Enter your password" required>
-                    </div>
-                    <button type="submit" class="btn-login">Login</button>
-                </form>
-            </div>
-
             <!-- Create Shop Section -->
             <div class="create-shop-section" id="create-shop-section">
                 <h2>Create Shop Details</h2>
@@ -64,24 +57,27 @@
             <!-- Manage Shop Section -->
             <div class="manage-shop-section" id="manage-shop-section">
                 <h2>Manage Shop Details</h2>
-                <!-- Dynamic content like shop list can be inserted here -->
+                <p>Details of the shops will be listed here.</p>
             </div>
 
             <!-- Manage Offer Section -->
             <div class="manage-offer-section" id="manage-offer-section">
                 <h2>Manage Offer Details</h2>
-                <!-- Dynamic content for managing offers goes here -->
+                <p>Details of offers will be listed here.</p>
             </div>
 
             <!-- Manage Category & Floor Section -->
             <div class="manage-category-floor-section" id="manage-category-floor-section">
                 <h2>Manage Category & Floor</h2>
-                <!-- Content for managing categories and floors -->
+                <p>Details of categories and floors will be listed here.</p>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 E-Shop. All rights reserved.</p>
+    </div>
+
 </body>
 </html>
-
-

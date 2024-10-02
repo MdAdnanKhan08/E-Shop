@@ -1,10 +1,12 @@
+/* General Reset */
 * {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    border: border-box;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
+/* Navbar Styles */
 .navbar {
     height: 65px;
     background-color: rgb(172, 160, 221);
@@ -12,31 +14,34 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* box-shadow: 0 0.5rem 1rem rgb(128, 120, 120); */
-    
+    /* position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999; */
 }
 
 .nav-logo {
     font-size: 40px;
     font-weight: 600;
-    /* font-style: italic; */
-} 
+    padding: 20px;
+}
 
 .logo {
     color: rgb(67, 45, 141);
     text-decoration: none;
+    padding: 20px;
 }
 
 .nav-search {
     display: flex;
     justify-content: space-evenly;
     background-color: white;
-    width: 620px;
+    width: 640px;
     height: 40px;
     border-radius: 40px;
 }
 
-.nav-search:hover{
+.nav-search:hover {
     border: 2px solid rgb(94, 94, 237);
 }
 
@@ -52,7 +57,6 @@
 .search-icon {
     width: 45px;
     display: flex;
-    /* display: none; */
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
@@ -61,42 +65,31 @@
     color: black;
 }
 
-.nav-cart {
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.nav-cart a:hover {
-    color: rgb(76, 76, 213);
-}
-
-.nav-cart i{
-    margin-right: 0.7rem;
-}
-
+.nav-cart,
 .nav-login {
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
 }
 
-.nav-login a, .nav-cart a{
-    text-decoration: none;
-    color: #fff;
-}
-.nav-login i{
-    margin-right: 0.7rem;
-}
-
+.nav-cart a:hover,
 .nav-login a:hover {
     color: rgb(76, 76, 213);
 }
 
-/* ----------------check----------------------- */
+.nav-cart i, .nav-login i {
+    margin-right: 0.7rem;
+}
 
+.nav-login a,
+.nav-cart a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    margin: 20px;
+}
 
-/*----------------------------- Panel ------------------------------------*/
+/* Panel Styles */
 .panel {
     height: 60px;
     background-color: rgb(207, 201, 232);
@@ -105,55 +98,101 @@
     justify-content: space-evenly;
     margin: 10px;
     font-size: 1.2rem;
+    overflow: hidden;
+    
 }
 
-.panel-all a{
+.panel-all a {
     color: #000;
     text-decoration: none;
-    /* display: none; */
 }
 
-.panel-all a:hover{
+.panel-all a:hover, .panel-options a:hover {
     color: rgb(76, 76, 213);
-}
-
-.panel-all i{
-    margin-right: 0.4rem;
-    font-size: 1.3rem;
+    text-decoration: underline;
 }
 
 .panel-options {
     width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
-.panel-options p{
-    display: inline;
-    padding: 0px 29px;
-}
-
-.panel-options p a{
+.panel-options a {
     text-decoration: none;
     color: #000;
 }
 
-.panel-options p a:hover {
-    color: rgb(76, 76, 213);
-    /* text-shadow: 0 0.5rem 1rem rgb(128, 120, 120); */
+.panel-options p {
+    display: inline;
+    padding: 0px 29px;
 }
 
+/* ----------------------- Responsive Styles ----------------------------- */
 
-/* ----------------------sidebar navigation------------------------------- */
+/* Screen size below 786px */
+@media (max-width: 786px) {
+    /* Navbar */
+    .nav-logo {
+        font-size: 30px;
+    }
+    .nav-search {
+        display: none;  /* Hide search bar on smaller screens */
+    }
+    .search-icon {
+        display: block; /* Show search icon only */
+    }
+    .nav-cart,
+    .nav-login {
+        font-size: 20px;
+    }
+
+    /* Panel */
+    .panel {
+        overflow-x: scroll; /* Make panel scrollable */
+        justify-content: flex-start;  /* Align items to the start */
+        padding: 0 10px;
+    }
+    .panel-options {
+        width: auto;  /* Panel options can now scroll horizontally */
+        white-space: nowrap;
+    }
+
+    /* Sidebar */
+    .sidebar-left {
+        width: 250px;
+    }
+}
+
+/* Screen size below 480px */
+@media (max-width: 480px) {
+    .nav-logo {
+        font-size: 26px;
+    }
+    .nav-cart,
+    .nav-login {
+        font-size: 18px;
+    }
+
+    .panel {
+        font-size: 1.1rem;
+    }
+
+    .menu p a {
+        font-size: 18px;
+    }
+}
+
+/*--------------------- Sidebar Styles------------------ */
 .sidebar-container-nav {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.7);
     transform: translateX(-100%);
-    /* adding with chatgpt */
-    /* transition: transform 0.5s ease;   */
+    transition: transform 0.4s ease; /* Smooth slide-in/out */
 }
 
 .slidebar-show {
@@ -161,85 +200,92 @@
 }
 
 .sidebar-left {
-    /* background-color: wheat; */
     background-color: rgb(225, 222, 239);
     width: 330px;
     height: 100%;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    z-index: 11;
 }
 
+/* Sidebar Header Menu */
 .sidebar-menu {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    padding-left: 30px;
-    box-shadow: 0 0 4cap rgba(112, 42, 42, 0.5);
+    /* align-items: center; */
+    padding: 20px 20px 10px 30px;
     background-color: #ccaed2;
-    /* width: 100%; */
-
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar-menu i{
-    /* color: rgb(91, 90, 90); */
+.sidebar-menu h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.sidebar-menu i {
     font-size: 25px;
-    /* left: 270px; */
-    /* opacity: 0; */
     cursor: pointer;
 }
 
-.menu {
-    /* width: 100%; */
-    /* top: 90px; */
-
-}
-
+/* Sidebar Links Menu */
 .menu p {
-    margin: 10px;
-    padding: 10px 20px;
-    /* border: 2px solid black; */
+    padding: 12px 25px;
+    margin: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu p:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
-    transition: all 0.3s ease;
-    /* border: 2px solid black;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5); */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.menu p a{
+.menu p a {
     color: rgb(74, 58, 58);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
+/* Social Media Icons */
 .social-media {
     position: absolute;
     display: flex;
-    left: 5%;
+    justify-content: center;
+    width: 100%;
     bottom: 50px;
 }
 
 .social-media i {
-    /* color: #000000; */
-    /* color: blue; */
+    font-size: 25px;
     opacity: 0.8;
     padding: 0 10px;
-    font-size: 25px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.social-media i:hover  {
-    /* color: blue; */
+.social-media i:hover {
     opacity: 1;
     transform: scale(1.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 786px) {
+    .sidebar-left {
+        width: 250px; /* Reduce sidebar width on smaller screens */
+    }
+
+    .menu p a {
+        font-size: 16px; /* Slightly smaller text for mobile */
+    }
 }
 
 
 /*------------------------- Hero sections -------------------------------*/
 
+/* Hero Section Styles */
 .hero-section {
     position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .img-list {
@@ -254,41 +300,79 @@
     transition: transform 0.5s;
 }
 
-.img-item img{
+.img-item img {
     width: 100%;
-    /* height: 100%; */
+    height: auto; /* Ensure proportional scaling */
 }
 
+/* Slider Buttons Container */
 .img-btn-container {
     position: absolute;
-    top: 0;
+    top: 45%;
+    transform: translateY(-50%); /* Center the buttons vertically */
     display: flex;
     justify-content: space-between;
     width: 100%;
+    z-index: 10; /* Keep the buttons above the images */
+    height: 120px;
 }
 
 .slider-btn {  
-    /* border: 2px solid transparent; */
-    margin: 100px 0px 100px 0px;
-    padding: 50px 10px;
-    font-size: 20px;
-    font-weight: 300;
-    background-color: white;
-    color: rgb(12, 12, 12);
+    padding: 20px 10px;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    background-color: #fff;
     border: none;
+    cursor: pointer;
+    z-index: 10; 
+    margin: 0px 10px;
 }
 
-.slider-btn:focus {
-    box-shadow: 0 0.5rem 1rem rgb(128, 120, 120);
-} 
+.slider-btn i {
+    color: rgb(12, 12, 12);
+    font-size: 24px;
+}
 
+.slider-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .img-list {
+        height: 240px; /* Adjust the height for mobile */
+    }
+
+    .slider-btn {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .slider-btn i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-list {
+        height: 180px; /* Further adjust height for small screens */
+    }
+
+    .img-btn-container {
+        height: 120px;
+    }
+    .slider-btn {
+        padding: 10px;
+        font-size: 14px;
+        height: 90px;
+    }
+
+    .slider-btn i {
+        font-size: 18px;
+    }
+}
 
 /* -------------- Shop Section---------------------------- */
 body {
-    /* font-family: Arial, sans-serif;
-    margin: 0; */
-    padding: 0;
     background-color: #f1f3f6;
   }
   
@@ -416,7 +500,7 @@ body {
     }
   
     .product-image {
-      height: 120px; /* Smaller images for mobile */
+      height: 90px; /* Smaller images for mobile */
     }
   }
 

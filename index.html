@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E - Shop</title>
     <!-- Link to FontAwesome CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="login.css"> -->
@@ -20,7 +21,8 @@
             <div class="nav-search">
                 <input type="text" id="search-input" placeholder="Search for Product and More">
                 <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    <i class="fas fa-search"></i>
                 </div>
             </div>
 
@@ -44,7 +46,7 @@
                 <p><a href="#fashion">Fashion</a></p>
                 <p><a href="#toys">Toys</a></p>
                 <p><a href="#electronics">Electronics</a></p>
-                <p><a href="#home&kitchen">Home & Kitchen</a></p>
+                <p><a href="#home&kitchen">Kitchen</a></p>
                 <p><a href="#books">Books</a></p>
                 <p><a href="#sports">Sports</a></p>          
             </div>
@@ -52,38 +54,37 @@
     </header>
 
     <!-- ----------------------sidebar navigation------------------------ -->
+    <!-- Sidebar Navigation -->
     <div class="sidebar-container-nav" id="sidebar-container-nav-id">
         <div class="sidebar-left">
+            <!-- Sidebar Header -->
             <div class="sidebar-menu" id="sidebar-cross-btn">
                 <h2>Menu</h2>
-                
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark" id="close-sidebar-btn"></i> <!-- Close Button -->
             </div>
+        
+            <!-- Menu Links -->
             <div class="menu">
                 <p><a href="#">Grocery</a></p>
                 <p><a href="#">Beauty</a></p>
                 <p><a href="#">Fashion</a></p>
                 <p><a href="#">Toys</a></p>
                 <p><a href="#">Electronics</a></p>
-                <p><a href="#">Home & Kitchen</a></p>
-                <!-- <p><a href="#">Books</a></p>
-                <p><a href="#">Sports</a></p>  -->
-                <p><a href="cart.html">Cart</a></p> 
-                <p><a href="login.html">Login</a></p> 
-                <p><a href="#">Settings</a></p> 
+                <p><a href="#">Kitchen</a></p>
+                <p><a href="#">Books</a></p>
+                <p><a href="#">Sports</a></p>
+                <p><a href="#">Settings</a></p>
             </div>
+
+            <!-- Social Media Links -->
             <div class="social-media">
-                <p><a href="#" style="color: blue;"><i class="fa-brands fa-facebook"></i></a></p>
-                <p><a href="#" style="color: rgb(0, 0, 255);"><i class="fa-brands fa-twitter"></i></a></p>
-                <p><a href="#" style="color: rgb(255, 0, 0);"><i class="fa-brands fa-instagram"></i></a></p>
-                <p><a href="#" style="color: red;"><i class="fa-brands fa-youtube"></i></a></p>
-              </div>
-            
+                <a href="#"><i class="fa-brands fa-facebook" style="color: blue;"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter" style="color: rgb(0, 0, 255);"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram" style="color: rgb(255, 0, 0);"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube" style="color: red;"></i></a>
+            </div>
         </div>
     </div>
-
-
-
 
     <!-- -------------------Hero Section----------------------- -->
     <div class="hero-section">
@@ -131,20 +132,19 @@
                         <button class="buy-btn">Buy Now</button>
                         <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
                     </div>
-                    <!-- Add more product-boxes here -->
-                    <div class="product-box">
-                        <div class="offer-tag">29% OFF</div> <!-- Offer Section -->
-                        <img src="/image/box6_image.jpg" alt="Product 1" class="product-image">
-                        <h4>Pet care</h4>
-                        <p class="price">₹1,999 <span class="original-price">₹8,000</span></p>
-                        <button class="buy-btn">Buy Now</button>
-                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
-                    </div>
                     <div class="product-box">
                         <div class="offer-tag">50% OFF</div> <!-- Offer Section -->
                         <img src="/image/shop-instrunment.webp" alt="Product 1" class="product-image">
                         <h4>Music & Instrument</h4>
                         <p class="price">₹4,999 <span class="original-price">₹8,000</span></p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <div class="offer-tag">65% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box3_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Room Decoration</h4>
+                        <p class="price">₹9,999 <span class="original-price">₹18,000</span></p>
                         <button class="buy-btn">Buy Now</button>
                         <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
                     </div>
@@ -156,11 +156,12 @@
                         <button class="buy-btn">Buy Now</button>
                         <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
                     </div>
+                    
                     <div class="product-box">
-                        <div class="offer-tag">65% OFF</div> <!-- Offer Section -->
-                        <img src="/image/box3_image.jpg" alt="Product 1" class="product-image">
-                        <h4>Room Decoration</h4>
-                        <p class="price">₹9,999 <span class="original-price">₹18,000</span></p>
+                        <div class="offer-tag">29% OFF</div> <!-- Offer Section -->
+                        <img src="/image/box6_image.jpg" alt="Product 1" class="product-image">
+                        <h4>Pet care</h4>
+                        <p class="price">₹1,999 <span class="original-price">₹8,000</span></p>
                         <button class="buy-btn">Buy Now</button>
                         <button class="cart-btn" onclick="addToCart('Mobile Phone', 15000)">Add to Cart</button>
                     </div>
@@ -748,13 +749,13 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <a href="admin.html"><h3>Admin Section</h3></a>
+                    <h3>Admin Section</h3>
                     <ul>
-                        <li><a href="admin.html">Login</a></li>
-                        <li><a href="#">Create Shop Details</a></li>
-                        <li><a href="#">Manage Shop Details</a></li>
-                        <li><a href="#">Manage Offer details</a></li>
-                        <li><a href="#">Manage Category & Floor</a></li>
+                        <li><a href="adminlogin.html">Login</a></li>
+                        <li><a href="adminlogin.html">Create Shop Details</a></li>
+                        <li><a href="adminlogin.html">Manage Shop Details</a></li>
+                        <li><a href="adminlogin.html">Manage Offer details</a></li>
+                        <li><a href="adminlogin.html">Manage Category & Floor</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -792,28 +793,5 @@
     </footer>
 
     <script src="app.js"></script>
-    <!-- <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyBSWedNRnpsAWhhY3uXeuBt7mw-7QJ_EEM",
-          authDomain: "e-shop-512f1.firebaseapp.com",
-          projectId: "e-shop-512f1",
-          storageBucket: "e-shop-512f1.appspot.com",
-          messagingSenderId: "350982405481",
-          appId: "1:350982405481:web:71c4ef52edc8723e1611f8",
-          measurementId: "G-EG8G794ELB"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script> -->
 </body>
 </html>

@@ -9,28 +9,57 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgb(172, 160, 221);
+    color: white;
+    
+}
+
+.header-logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    padding-right: 30px;
+}
+.header-link:hover {
+    color: rgb(76, 76, 213);
+    text-decoration: underline;
 }
 
 /* Admin Container */
 .admin-container {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    flex-grow: 1;
     background-color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
 
 /* Sidebar Styles */
 .sidebar {
     width: 250px;
-    background-color: rgb(172, 160, 221);
+    background-color: rgb(207, 201, 232);
     padding: 20px;
-    color: white;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    color: rgb(25, 25, 25);
 }
 
 .sidebar h2 {
@@ -47,14 +76,13 @@ body, html {
 }
 
 .sidebar ul li a {
-    color: white;
+    color: rgb(24, 24, 24);
     text-decoration: none;
     font-size: 16px;
 }
 
 .sidebar ul li a:hover {
-    /* color: #5a9; */
-    color: rgb(73, 73, 177)
+    color: rgb(73, 73, 177);
 }
 
 /* Main Content */
@@ -73,7 +101,7 @@ body, html {
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
@@ -84,19 +112,20 @@ body, html {
 
 .input-group input {
     padding: 10px;
+    width: 40%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 button {
     padding: 12px;
-    /* background-color: #5a9; */
     background-color: rgb(157, 146, 206);
     color: white;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 200px;
 }
 
 button:hover {
@@ -111,8 +140,20 @@ button:hover {
     display: none;
 }
 
+/* Active section */
 .active {
     display: block;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #3e374d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Responsive Design */
@@ -125,5 +166,3 @@ button:hover {
         padding: 15px;
     }
 }
-
-

@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Get sections
-    const loginSection = document.getElementById('login-section');
     const createShopSection = document.getElementById('create-shop-section');
     const manageShopSection = document.getElementById('manage-shop-section');
     const manageOfferSection = document.getElementById('manage-offer-section');
@@ -12,15 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const manageOfferLink = document.getElementById('manage-offer-link');
     const manageCategoryFloorLink = document.getElementById('manage-category-floor-link');
 
-    // Hide all sections except login by default
-    loginSection.classList.add('active');
-
-    // Simulate login (basic example)
-    document.getElementById('admin-login-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        loginSection.classList.remove('active');
-        createShopSection.classList.add('active');
-    });
+    // Show Create Shop Section by default
+    createShopSection.classList.add('active');
 
     // Show Create Shop Section
     createShopLink.addEventListener('click', () => {
@@ -53,4 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
         manageOfferSection.classList.remove('active');
         manageCategoryFloorSection.classList.remove('active');
     }
+
 });
